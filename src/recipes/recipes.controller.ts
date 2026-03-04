@@ -7,7 +7,7 @@ export class RecipesController {
 
   @Get()
   findAll() {
-    return [];
+    return this.recipeService.findAll();
   }
 
   @Get('popular-recipe')
