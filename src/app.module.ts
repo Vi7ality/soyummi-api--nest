@@ -6,7 +6,7 @@ import { RecipesModule } from './recipes/recipes.module';
 import { MongooseModule } from '@nestjs/mongoose';
 
 @Module({
-  imports: [RecipesModule, MongooseModule.forRoot(process.env.DB_HOST, {})],
+  imports: [RecipesModule, MongooseModule.forRoot(process.env.DB_HOST!)],
   controllers: [AppController, RecipesController],
   providers: [AppService],
 })
